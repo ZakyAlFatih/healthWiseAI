@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primaryColor: '#5d5a88',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <nav>
+        <ul class="flex items-center justify-center pl-20">
+            <li class="flex items-center justify-center"><img src="./image/HealthWise.png" alt=""></li>
+            <li class="flex items-center justify-center text-lg font-bold text-primaryColor"><p>HealthWiseAi</p></li>
+        </ul>
+    </nav>
+    
+    <div class="flex items-center justify-center mt-40">
+            <div class="imagePlace mr-36">
+                <img src="image/indexPhoto.png" alt="">
+            </div>
+            <div class="textClass">
+                <p class="text-4xl mb-4 font-bold">Health Report</p>
+                <p class="text-m font-normal w-96">Access daily and monthly health reports to keep your well-being on track.</p>
+                <button class="bg-primaryColor mt-10 hover:bg-purple-700 text-white font-bold py-4 px-14 rounded-full text-sm mr-4">View Daily Report</button>
+                <button class=" mt-10 text-primaryColor border font-normal py-4 px-14 rounded-full text-sm">View Monthly Report</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
