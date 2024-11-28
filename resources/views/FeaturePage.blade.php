@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthWiseAI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryColor: '#5d5a88',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul class="flex items-center justify-center pl-20">
+            <li class="flex items-center justify-center"><img src="images/HealthWise.png" alt=""></li>
+            <li class="flex items-center justify-center text-lg font-bold text-primaryColor">
+                <p>HealthWiseAI</p>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="flex items-center justify-center mt-28">
+        <div class="flex flex-col justify-center items-center">
+            <p class="text-4xl font-bold text-primaryColor">Explore HealthWiseAI Features</p>
+            <p class="text-normal font-light text-primaryColor mt-8 mb-10">Select a feature to start your health journey
+            </p>
+
+
+            <a href="">
+                <div class="flex items-center justify-center mt-10">
+                    <div class="flex flex-col items-center mr-20">
+                        <img class="h-64 w-64 object-contain" src="images/HealthDataInput.png" alt="">
+                        <p class="text-2xl font-bold text-primaryColor mt-10">Health Data Input</p>
+                    </div>
+            </a>
+
+            <a href="">
+                <div class="flex flex-col items-center mr-20">
+                    <img class="h-64 w-64 object-contain" src="images/Recomendation.png" alt="">
+                    <p class="text-2xl font-bold text-primaryColor mt-10">Recommendations</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="flex flex-col items-center mr-20">
+                    <img class="h-64 w-64 object-contain" src="images/ChatBot.png" alt="">
+                    <p class="text-2xl font-bold text-primaryColor mt-10">Chatbot</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="flex flex-col items-center mr-20">
+                    <img class="h-64 w-64 object-contain" src="images/HealthReport.png" alt="">
+                    <p class="text-2xl font-bold text-primaryColor mt-10">Health Report</p>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>
