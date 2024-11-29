@@ -25,7 +25,10 @@ Route::get('/Food', [FoodController::class, 'showFood']);
 Route::get('/Health', [HealthController::class, 'showHealth']);
 Route::get('/HealthReportLP', [HealthReportLPController::class, 'showHealthReportLP']);
 Route::get('/LandingPage', [LandingPageController::class, 'showLandingPage']);
-Route::get('/Login', [FeaturePageController::class, 'showLogin']);
+Route::get('/Login', [RegisterController::class, 'showLogin']);
+Route::get('/login', [RegisterController::class, 'showLogin'])->name('Login');
 Route::get('/Register', [RegisterController::class, 'showRegister']);
+Route::get('/Register', [RegisterController::class, 'showRegister'])->name('register');
 // Handle the chat message (POST request)
 Route::post('/chat', [ChatController::class, 'getChatResponse']);
+Route::post('/register', [RegisterController::class, 'register']);

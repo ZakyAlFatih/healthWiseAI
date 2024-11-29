@@ -9,15 +9,17 @@ class User extends Model
 {
     use HasFactory;
 
-    protected $table = 'user';
+    protected $table = 'user';  // Update to 'user'
 
     protected $primaryKey = 'userID';
     public $incrementing = false;
 
     protected $fillable = [
-        'username',
+        'userID',
         'password',
-        'name',
+        'firstname',
+        'lastname',
+        'phone',
         'email',
         'tanggalLahir',
     ];
@@ -31,6 +33,4 @@ class User extends Model
     {
         return $this->hasMany(Konsultasi::class, 'userID', 'userID');
     }
-
-    // Add other relationships for `laporankesehatan`, `rekomendasimakanan`, etc.
 }

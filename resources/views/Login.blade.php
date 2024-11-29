@@ -7,6 +7,7 @@
     <title>HealthWiseAI</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             background-color: #fff;
@@ -173,6 +174,11 @@
 </head>
 
 <body>
+@if(session('success'))
+    <div id="success-alert" class="bg-green-500 text-white p-4 rounded-lg mb-4 opacity-0 transition-opacity duration-1000 fixed top-0 left-0 right-0 z-50">
+        {{ session('success') }}
+    </div>
+@endif
     <header class="d-flex justify-content-between align-items-center p-4">
         <div class="logo">
             <img src="images/Healthwise_logo.png" alt="Logo">
@@ -223,6 +229,7 @@
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ asset('js/alert.js') }}"></script>
 </body>
 
 </html>
