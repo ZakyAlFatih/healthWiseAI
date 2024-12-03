@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthWiseAI</title>
+    <title>HealthWiseAI - Login</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -174,19 +174,26 @@
 </head>
 
 <body>
-@if(session('success'))
-    <div id="success-alert" class="bg-green-500 text-white p-4 rounded-lg mb-4 opacity-0 transition-opacity duration-1000 fixed top-0 left-0 right-0 z-50">
-        {{ session('success') }}
-    </div>
-@endif
+    @if (session('success'))
+        <div id="success-alert" class="bg-green-500 text-white p-4 rounded-lg mb-4 fixed top-0 left-0 right-0">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div id="error-alert" class="bg-red-500 text-white p-4 rounded-lg mb-4 fixed top-0 left-0 right-0">
+            {{ session('error') }}
+        </div>
+    @endif
+
     <header class="d-flex justify-content-between align-items-center p-4">
         <div class="logo">
             <img src="images/Healthwise_logo.png" alt="Logo">
             HealthWiseAI
         </div>
         <div>
-            <a href="login.html" class="btn btn me-2 btn-login">Login</a>
-            <a href="#" class="btn btn-custom text-white">Get Started</a>
+            <a href="{{ route('login') }}" class="btn btn me-2 btn-login">Login</a>
+            <a href="{{ route('register') }}" class="btn btn-custom text-white">Get Started</a>
         </div>
     </header>
 
@@ -205,14 +212,17 @@
 
         <!-- Login Form Section -->
         <div class="form-container">
-            <form>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                    <input type="email" name="email" class="form-control" id="email"
+                        placeholder="Enter your email address" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    <input type="password" name="password" class="form-control" id="password"
+                        placeholder="Enter your password" required>
                 </div>
 
                 <!-- Centering button wrapper -->
@@ -221,15 +231,13 @@
                 </div>
 
                 <p class="mt-3 text-center">
-                    <small>Don't have an account? <a href="#" class="link-muted">Sign up here</a></small>
+                    <small>Don't have an account? <a href="{{ route('register') }}" class="link-muted">Sign up
+                            here</a></small>
+
                 </p>
             </form>
         </div>
-
-
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="{{ asset('js/alert.js') }}"></script>
+    </div>
 </body>
 
 </html>

@@ -21,6 +21,12 @@
 </head>
 
 <body>
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <nav>
         <ul class="flex items-center justify-center pl-20">
             <li class="flex items-center justify-center"><img src="images/HealthWise.png" alt=""></li>
@@ -68,6 +74,8 @@
 
     </div>
     </div>
+
+
 </body>
 
 </html>
