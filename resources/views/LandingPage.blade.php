@@ -136,8 +136,8 @@
             HealthWiseAI
         </div>
         <div>
-            <a href="login.html" class="btn btn me-2 btn-login">Login</a>
-            <a href="#" class="btn btn-custom text-white">Get Started</a>
+            <a href="/login" class="btn btn me-2 btn-login">Login</a>
+            <a href="/register" class="btn btn-custom text-white">Get Started</a>
         </div>
     </header>
 
@@ -149,7 +149,7 @@
                 <span>Health Decisions</span>
             </h1>
             <p>Personalized AI-driven health insights at your fingertips.</p>
-            <a href="#" class="btn btn-custom1 mt-4">
+            <a href="/register" class="btn btn-custom1 mt-4">
                 Get Started
                 <i class="fas fa-arrow-right"></i>
             </a>

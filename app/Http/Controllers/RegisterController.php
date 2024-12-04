@@ -29,7 +29,7 @@ class RegisterController extends Controller
         }
 
         $user = User::create([
-            'userID' => uniqid(), 
+            'userID' => uniqid(),
             'password' => bcrypt($request->password),
             'firstname' => $request->firstname,
             'lastname' => $request->lastname,
@@ -37,10 +37,6 @@ class RegisterController extends Controller
             'phone' => $request->phone,
         ]);
 
-        return redirect()->route('Login')->with('success', 'Registration successful! Silahkan Login');
-    }
-    public function showLogin()
-    {
-        return view('Login');
+        return redirect()->route('login')->with('success', 'Registration successful! Silahkan Login');
     }
 }
