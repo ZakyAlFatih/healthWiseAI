@@ -26,7 +26,7 @@ class LoginController extends Controller
         }
 
         // Login gagal
-        return redirect()->route('Login')
+        return redirect()->route('login')
             ->with('error', 'Login gagal! Email atau password salah.');
     }
 }
