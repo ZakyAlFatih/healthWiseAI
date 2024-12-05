@@ -32,12 +32,10 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="flex items-center justify-center mt-28">
         <div class="flex flex-col justify-center items-center">
             <p class="text-4xl font-bold text-primaryColor">Explore HealthWiseAI Features</p>
             <p class="text-normal font-light text-primaryColor mt-8 mb-10">Select a feature to start your health journey</p>
-
             <div class="flex items-center justify-center mt-10 space-x-8">
                 <a href="#" id="health-data-input" onclick="completeHealthData()" class="card group">
                     <img class="h-36 w-36 object-contain transition-transform group-hover:scale-110" src="images/HealthDataInput.png" alt="Health Data Input">
@@ -72,15 +70,12 @@
 
     <script>
         let isHealthDataComplete = false;
-
         function completeHealthData() {
             isHealthDataComplete = true;
             document.getElementById('recommendations').classList.remove('grayscale');
             document.getElementById('recommendations').onclick = null;
-
             document.getElementById('chatbot').classList.remove('grayscale');
             document.getElementById('chatbot').onclick = null;
-
             document.getElementById('health-report').classList.remove('grayscale');
             document.getElementById('health-report').onclick = null;
         }
@@ -107,8 +102,8 @@
             padding: 2rem;
             box-shadow: 0px 4px 10px rgba(93, 90, 136, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
-            width: 16rem; /* Ukuran tetap */
-            height: 20rem; /* Ukuran tetap */
+            width: 16rem; 
+            height: 20rem;
         }
 
         .card:hover {
