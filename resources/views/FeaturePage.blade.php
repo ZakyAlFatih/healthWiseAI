@@ -25,7 +25,6 @@
     </script>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md">
         <div class="flex items-center px-8 py-4">
             <img src="./image/HealthWise.png" alt="HealthWise Logo" class="h-10">
@@ -40,25 +39,21 @@
             <p class="text-normal font-light text-primaryColor mt-8 mb-10">Select a feature to start your health journey</p>
 
             <div class="flex items-center justify-center mt-10 space-x-8">
-                <!-- Health Data Input Card -->
                 <a href="#" id="health-data-input" onclick="completeHealthData()" class="card group">
                     <img class="h-36 w-36 object-contain transition-transform group-hover:scale-110" src="./image/HealthDataInput.png" alt="Health Data Input">
                     <p class="text-xl font-bold text-primaryColor mt-4 group-hover:text-purple-800 whitespace-nowrap">Health Data Input</p>
                 </a>
 
-                <!-- Recommendations Card -->
                 <div class="card group grayscale" id="recommendations" onclick="showPopup()">
                     <img class="h-36 w-36 object-contain" src="./image/Recomendation.png" alt="Recommendations">
                     <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Recommendations</p>
                 </div>
 
-                <!-- Chatbot Card -->
                 <div class="card group grayscale" id="chatbot" onclick="showPopup()">
                     <img class="h-36 w-36 object-contain" src="./image/ChatBot.png" alt="Chatbot">
                     <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Chatbot</p>
                 </div>
 
-                <!-- Health Report Card -->
                 <div class="card group grayscale" id="health-report" onclick="showPopup()">
                     <img class="h-36 w-36 object-contain" src="./image/HealthReport.png" alt="Health Report">
                     <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Health Report</p>
@@ -67,7 +62,6 @@
         </div>
     </div>
 
-    <!-- Pop-Up Message -->
     <div id="popup-message" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
             <p class="text-lg font-semibold text-primaryColor mb-4">Let’s make your health journey smarter.</p>
@@ -103,7 +97,6 @@
     </script>
 
     <style>
-        /* Custom Card Style */
         .card {
             display: flex;
             flex-direction: column;
