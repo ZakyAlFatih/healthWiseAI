@@ -27,7 +27,7 @@
 <body>
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md">
         <div class="flex items-center px-8 py-4">
-            <img src="./image/HealthWise.png" alt="HealthWise Logo" class="h-10">
+            <img src="images/HealthWise.png" alt="HealthWise Logo" class="h-10">
             <p class="text-lg font-bold text-primaryColor ml-4">HealthWiseAI</p>
         </div>
     </nav>
@@ -40,22 +40,22 @@
 
             <div class="flex items-center justify-center mt-10 space-x-8">
                 <a href="#" id="health-data-input" onclick="completeHealthData()" class="card group">
-                    <img class="h-36 w-36 object-contain transition-transform group-hover:scale-110" src="./image/HealthDataInput.png" alt="Health Data Input">
+                    <img class="h-36 w-36 object-contain transition-transform group-hover:scale-110" src="images/HealthDataInput.png" alt="Health Data Input">
                     <p class="text-xl font-bold text-primaryColor mt-4 group-hover:text-purple-800 whitespace-nowrap">Health Data Input</p>
                 </a>
 
                 <div class="card group grayscale" id="recommendations" onclick="showPopup()">
-                    <img class="h-36 w-36 object-contain" src="./image/Recomendation.png" alt="Recommendations">
+                    <img class="h-36 w-36 object-contain" src="images/Recomendation.png" alt="Recommendations">
                     <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Recommendations</p>
                 </div>
 
                 <div class="card group grayscale" id="chatbot" onclick="showPopup()">
-                    <img class="h-36 w-36 object-contain" src="./image/ChatBot.png" alt="Chatbot">
+                    <img class="h-36 w-36 object-contain" src="images/ChatBot.png" alt="Chatbot">
                     <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Chatbot</p>
                 </div>
 
                 <div class="card group grayscale" id="health-report" onclick="showPopup()">
-                    <img class="h-36 w-36 object-contain" src="./image/HealthReport.png" alt="Health Report">
+                    <img class="h-36 w-36 object-contain" src="images/HealthReport.png" alt="Health Report">
                     <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Health Report</p>
                 </div>
             </div>
