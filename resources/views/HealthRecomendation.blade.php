@@ -3,64 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Personalized Health Recommendations</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                primaryColor: '#5d5a88',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        primaryColor: '#5d5a88',
+                        cardBg: '#f2f1f9',
+                    },
+                    borderRadius: {
+                        card: '1rem',
+                    },
+                    boxShadow: {
+                        active: '0px 8px 15px rgba(93, 90, 136, 0.2)',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
 </head>
-<body>
-    <nav>
-        <ul class="flex items-center justify-center pl-20">
-            <li class="flex items-center justify-center"><img src="images/HealthWise.png" alt=""></li>
-            <li class="flex items-center justify-center text-lg font-bold text-primaryColor"><p>HealthWiseAi</p></li>
-        </ul>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-10">
+        <div class="flex items-center px-8 py-4">
+            <img src="images/HealthWise.png" alt="HealthWise Logo" class="h-10">
+            <p class="text-lg font-bold text-primaryColor ml-4">HealthWiseAI</p>
+        </div>
     </nav>
-    
-    <div class="flex items-center justify-center mt-28">
-        <div class="flex flex-col justify-center items-center">
-            <p class="text-4xl font-bold text-primaryColor">Explore HealthWiseAi Features</p>
-            <p class="text-normal font-light text-primaryColor mt-8 mb-10">Select a feature to start your health journey</p>
 
+    <!-- Main Content -->
+    <div class="flex flex-col items-center justify-center min-h-screen mt-20">
+        <!-- Recommendations Section -->
+        <p class="text-3xl font-bold text-primaryColor mb-8">Your Personalized Health Recommendations</p>
+        <p class="text-gray-600 mb-12 text-center">Based on your health data, here are some tips to improve your overall health.</p>
 
-            <a href="">
-            <div class="flex items-center justify-center mt-10">
-                <div class="flex flex-col items-center mr-20">
-                    <img class="h-64 w-64 object-contain" src="images/HealthDataInput.png" alt="">
-                    <p class="text-2xl font-bold text-primaryColor mt-10">Health Data Input</p>
-                </div>
-            </a>
-
-            <a href="">    
-                <div class="flex flex-col items-center mr-20">
-                    <img class="h-64 w-64 object-contain" src="images/Recomendation.png" alt="">
-                    <p class="text-2xl font-bold text-primaryColor mt-10">Health Data Input</p>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex flex-col items-center mr-20">
-                    <img class="h-64 w-64 object-contain" src="images/ChatBot.png" alt="">
-                    <p class="text-2xl font-bold text-primaryColor mt-10">Health Data Input</p>
-                </div>
-            </a>
-            <a href="">
-                <div class="flex flex-col items-center mr-20">
-                    <img class="h-64 w-64 object-contain" src="images/HealthReport.png" alt="">
-                    <p class="text-2xl font-bold text-primaryColor mt-10">Health Data Input</p>
-                </div>
-            </a>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-0">
+            <!-- Card 1 -->
+            <div class="bg-cardBg rounded-card shadow-md p-6 flex flex-col items-center text-center w-80">
+                <img src="images/sleep.png" alt="Sleep Tips" class="h-32 w-32 mb-4"> <!-- Ukuran diperbesar -->
+                <h3 class="text-lg font-bold text-primaryColor mb-2">Better Sleep Tips</h3>
+                <p class="text-gray-600 mb-4">Aim for 7-9 hours of sleep every night for better energy and focus.</p>
+                <a href="https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379" target="_blank" class="text-primaryColor font-medium">Read more →</a>
             </div>
 
+            <!-- Card 2 -->
+            <div class="bg-cardBg rounded-card shadow-md p-6 flex flex-col items-center text-center w-80">
+                <img src="images/stress.png" alt="Stress Management" class="h-32 w-32 mb-4">
+                <h3 class="text-lg font-bold text-primaryColor mb-2">Stress Management</h3>
+                <p class="text-gray-600 mb-4">Consider practicing meditation or deep breathing exercises to reduce stress.</p>
+                <a href="https://www.mentalhealth.org.uk/explore-mental-health/publications/how-manage-and-reduce-stress" target="_blank" class="text-primaryColor font-medium">Read more →</a>
+            </div>
 
+            <!-- Card 3 -->
+            <div class="bg-cardBg rounded-card shadow-md p-6 flex flex-col items-center text-center w-80">
+                <img src="images/hydration.png" alt="Hydration" class="h-32 w-32 mb-4">
+                <h3 class="text-lg font-bold text-primaryColor mb-2">Hydration and Nutrition</h3>
+                <p class="text-gray-600 mb-4">Drink at least 8 cups of water daily for optimal hydration and health.</p>
+                <a href="https://ivboost.uk/nutrition-hydration-tips/" target="_blank" class="text-primaryColor font-medium">Read more →</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-cardBg rounded-card shadow-md p-6 flex flex-col items-center text-center w-80">
+                <img src="images/mindfulness.png" alt="Mindfulness" class="h-32 w-32 mb-4">
+                <h3 class="text-lg font-bold text-primaryColor mb-2">Mindfulness</h3>
+                <p class="text-gray-600 mb-4">Try mindfulness techniques to improve your mental well-being.</p>
+                <a href="https://www.mind.org.uk/information-support/drugs-and-treatments/mindfulness/mindfulness-exercises-tips/" target="_blank" class="text-primaryColor font-medium">Read more →</a>
+            </div>
         </div>
     </div>
 </body>
