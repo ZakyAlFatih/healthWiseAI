@@ -1,0 +1,161 @@
+body {
+    background-color: #fff;
+    font-family: "rotunda", sans-serif;
+}
+
+/* Header section */
+.logo {
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #5d5a88;
+    line-height: 18px;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 50px;
+}
+
+.btn-login {
+    padding: 12px 24px;
+    border: #d4d2e3 solid 1px;
+    border-radius: 30px;
+    color: #5d5a88;
+}
+
+.btn-login:hover {
+    background-color: #e7e6f2;
+    color: #5d5a88;
+}
+
+.btn-custom {
+    background-color: #5d5a88;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    margin-right: 50px;
+}
+
+.btn-custom:hover {
+    background-color: #9795b5;
+}
+
+/* Main layout styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 0 50px;
+}
+
+/* Image and welcome section */
+.image-wrapper {
+    position: relative;
+    max-width: 527px;
+    margin-left: -110px;
+    flex-shrink: 0;
+}
+
+.doctor-image {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-section {
+    position: absolute;
+    top: 85px;
+    left: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 500px;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.welcome-text {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 66px;
+    color: #5d5a88;
+    margin-bottom: 10px;
+}
+
+.welcome-desc {
+    font-size: 18px;
+    color: #9795b5;
+}
+
+/* Form container */
+.form-container {
+    background-color: #f2f1fa;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin-left: 0;
+    margin-right: auto;
+    margin-left: 350px;
+}
+
+.form-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5d5a88;
+    margin-top: 20px;
+}
+
+.form-control {
+    border-radius: 50px;
+    height: 56px;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.form-control::placeholder {
+    color: #adabc3;
+}
+
+/* Button wrapper to center button */
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #5d5a88;
+    border: none;
+    border-radius: 50px;
+    height: 70px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    width: 235px;
+    margin-top: 32px;
+}
+
+.btn-primary:hover {
+    background-color: #9795b5;
+}
+
+p.mt-3.text-center small {
+    color: #adabc3;
+}
+
+.link-muted {
+    color: #adabc3;
+    text-decoration: none;
+}
+
+.link-muted:hover {
+    text-decoration: underline;
+}

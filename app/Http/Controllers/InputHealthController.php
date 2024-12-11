@@ -26,30 +26,46 @@ class InputHealthController extends Controller
     }
 
     public function store(Request $request)
-    {
-        // Validasi data
-        $validatedData = $request->validate([
-            'userID' => 'required|string|max:50',
-            'weight' => 'nullable|numeric',
-            'height' => 'nullable|numeric',
-            'gender' => 'required|in:Male,Female,Other',
-            'health_history' => 'nullable|array',
-            'symptoms' => 'nullable|array',
-            'activity_level' => 'nullable|string',
-        ]);
+{
+    // Ambil userID dari pengguna yang sedang login
+    $user = auth()->user(); // Pastikan pengguna sudah login
 
-        // Format array menjadi JSON
-        if ($request->has('health_history')) {
-            $validatedData['health_history'] = json_encode($request->health_history);
-        }
-
-        if ($request->has('symptoms')) {
-            $validatedData['symptoms'] = json_encode($request->symptoms);
-        }
-
-        // Simpan data ke database
-        RiwayatKesehatan::create($validatedData);
-
-        return redirect()->back()->with('success', 'Health data has been saved successfully.');
+    if (!$user) {
+        return redirect()->back()->withErrors('You must be logged in to submit health data.');
     }
+    $userID = $user->userID; // Sesuaikan dengan nama kolom yang digunakan untuk ID user
+
+    // Validasi data
+    $validatedData = $request->validate([
+        'weight' => 'nullable|numeric',
+        'height' => 'nullable|numeric',
+        'gender' => 'required|in:Male,Female,Other',
+        'health_history' => 'nullable|array',
+        'symptoms' => 'nullable|array',
+        'activity_level' => 'nullable|string',
+        'step_count' => 'nullable|numeric',
+        'sleep_duration' => 'nullable|numeric',
+        'physical_activity' => 'nullable|array',
+        'calories_burned' => 'nullable|numeric',
+        'sedentary_time' => 'nullable|numeric',
+        'water_intake' => 'nullable|numeric',
+        'meal_log' => 'nullable|string',
+        'mood_level' => 'nullable|numeric',
+    ]);
+    // Tambahkan userID ke data yang akan disimpan
+    $validatedData['userID'] = $userID;
+
+    // Format array menjadi JSON
+    $validatedData['health_history'] = $request->has('health_history') ? json_encode($request->health_history) : null;
+    $validatedData['symptoms'] = $request->has('symptoms') ? json_encode($request->symptoms) : null;
+    $validatedData['physical_activity'] = $request->has('physical_activity') ? json_encode($request->physical_activity) : null;
+
+     // Untuk melihat data yang tervalidasi
+
+    // Simpan data ke database
+    RiwayatKesehatan::create($validatedData);
+
+    // Redirect ke landing page setelah berhasil
+    return redirect('/featurepage')->with('success', 'Health data has been saved successfully.');
+}
 }

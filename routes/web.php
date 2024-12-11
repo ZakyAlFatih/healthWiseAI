@@ -50,3 +50,5 @@ Route::post('/input-dailyact', [InputHealthController::class, 'showInputHealthDa
 
 Route::get('/input-diet', [InputHealthController::class, 'showInputHealthDiet'])->name('input-diet');
 Route::post('/input-diet', [InputHealthController::class, 'showInputHealthDiet'])->name('input-diet');
+
+Route::post('/health', [InputHealthController::class, 'store'])->name('health.store');

@@ -1,0 +1,118 @@
+body {
+    background-color: #9795b5;
+    color: #fff;
+    font-family: "rotunda", sans-serif;
+    background-image: url("images/Landing_BG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 14vh;
+}
+
+.logo {
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #5d5a88;
+    line-height: 18px;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 50px;
+}
+
+.hero-section {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 66px;
+}
+
+.hero-text h1 span {
+    display: block;
+    text-align: left;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    max-width: 55%;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+.btn-login {
+    padding: 12px 24px;
+    border: #d4d2e3 solid 1px;
+    border-radius: 30px;
+    color: #5d5a88;
+}
+
+.btn-login:hover {
+    background-color: #e7e6f2;
+    color: #5d5a88;
+}
+
+.btn-custom {
+    background-color: #5d5a88;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    margin-right: 100px;
+}
+
+.btn-custom:hover {
+    background-color: #9795b5;
+}
+
+.btn-custom1 {
+    background-color: #fff;
+    border: none;
+    padding: 18px 30px;
+    border-radius: 30px;
+    margin-right: 100px;
+    color: #5d5a88;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-custom1:hover {
+    background-color: #5d5a88;
+    color: #fff;
+}
+
+.btn-custom1 .fa-arrow-right {
+    font-size: 18px;
+    margin-left: 10px;
+    color: #5d5a88;
+}
+
+.btn-custom1:hover .fa-arrow-right {
+    color: #fff;
+}
