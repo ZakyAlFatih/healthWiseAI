@@ -165,7 +165,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label" for="calories">Calories Burned</label>
-                                <input class="form-control" id="calories" placeholder="Enter the calories burned during exercise" name="sleep_duration" type="text" required/>
+                                <input class="form-control" id="calories" placeholder="Enter the calories burned during exercise" name="calories_burned" type="text" required/>
                             </div>
                         </div>
                         <div class="row mb-3">
