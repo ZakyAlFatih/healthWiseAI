@@ -8,6 +8,7 @@ use App\Http\Controllers\FeaturePageController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\HealthController;
 use App\Http\Controllers\HealthReportLPController;
+use App\Http\Controllers\InputHealthController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -39,3 +40,13 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 // Route for showing the dashboard (GET request)
 Route::get('/featurepage', [FeaturePageController::class, 'showFeaturePage'])->name('FeaturePage');
+
+// route for input health
+Route::get('/input-personal', [InputHealthController::class, 'showInputHealth'])->name('input-personal');
+Route::post('/input-personal', [InputHealthController::class, 'showInputHealth'])->name('input-personal');
+
+Route::get('/input-dailyact', [InputHealthController::class, 'showInputHealthDailyAct'])->name('input-dailyact');
+Route::post('/input-dailyact', [InputHealthController::class, 'showInputHealthDailyAct'])->name('input-dailyact');
+
+Route::get('/input-diet', [InputHealthController::class, 'showInputHealthDiet'])->name('input-diet');
+Route::post('/input-diet', [InputHealthController::class, 'showInputHealthDiet'])->name('input-diet');

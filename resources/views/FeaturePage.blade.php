@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,7 @@
         }
     </script>
 </head>
+
 <body>
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md">
         <div class="flex items-center px-8 py-4">
@@ -35,11 +37,14 @@
     <div class="flex items-center justify-center mt-28">
         <div class="flex flex-col justify-center items-center">
             <p class="text-4xl font-bold text-primaryColor">Explore HealthWiseAI Features</p>
-            <p class="text-normal font-light text-primaryColor mt-8 mb-10">Select a feature to start your health journey</p>
+            <p class="text-normal font-light text-primaryColor mt-8 mb-10">Select a feature to start your health journey
+            </p>
             <div class="flex items-center justify-center mt-10 space-x-8">
-                <a href="#" id="health-data-input" onclick="completeHealthData()" class="card group">
-                    <img class="h-36 w-36 object-contain transition-transform group-hover:scale-110" src="images/HealthDataInput.png" alt="Health Data Input">
-                    <p class="text-xl font-bold text-primaryColor mt-4 group-hover:text-purple-800 whitespace-nowrap">Health Data Input</p>
+                <a href="/input-personal" id="health-data-input" onclick="completeHealthData()" class="card group">
+                    <img class="h-36 w-36 object-contain transition-transform group-hover:scale-110"
+                        src="images/HealthDataInput.png" alt="Health Data Input">
+                    <p class="text-xl font-bold text-primaryColor mt-4 group-hover:text-purple-800 whitespace-nowrap">
+                        Health Data Input</p>
                 </a>
 
                 <div class="card group grayscale" id="recommendations" onclick="showPopup()">
@@ -63,13 +68,15 @@
     <div id="popup-message" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
             <p class="text-lg font-semibold text-primaryColor mb-4">Let’s make your health journey smarter.</p>
-            <p class="text-sm text-gray-600 mb-4">Complete your health data input to access all the powerful features of HealthWiseAI!</p>
+            <p class="text-sm text-gray-600 mb-4">Complete your health data input to access all the powerful features of
+                HealthWiseAI!</p>
             <button class="bg-primaryColor text-white px-4 py-2 rounded-lg" onclick="closePopup()">OK</button>
         </div>
     </div>
 
     <script>
         let isHealthDataComplete = false;
+
         function completeHealthData() {
             isHealthDataComplete = true;
             document.getElementById('recommendations').classList.remove('grayscale');
@@ -102,7 +109,7 @@
             padding: 2rem;
             box-shadow: 0px 4px 10px rgba(93, 90, 136, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
-            width: 16rem; 
+            width: 16rem;
             height: 20rem;
         }
 
@@ -117,4 +124,5 @@
         }
     </style>
 </body>
+
 </html>
