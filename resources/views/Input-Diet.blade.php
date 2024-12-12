@@ -248,6 +248,13 @@
                                 placeholder="Rate your stress or mood level today (1-10)" type="text" required />
                         </div>
                     </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="day">Day</label>
+                            <input class="form-control" id="day"
+                                placeholder="input the day you filled this out in integer?" type="text" required />
+                        </div>
+                    </div>
                     <div class="text-center">
                         <button class="btn btn-primary" type="submit">Submit Health Data</button>
                     </div>

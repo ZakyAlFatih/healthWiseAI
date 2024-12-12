@@ -20,7 +20,7 @@ Route::get('/FoodRec', [healthWiseController::class, 'tampil'])->name('healthWis
 
 
 Route::get('/chat', [ChatController::class, 'showChat']);
-Route::get('/exercise', [ExerciseController::class, 'showExercise']);
+Route::get('/Exercise', [ExerciseController::class, 'showExercise']);
 
 Route::get('/food', [FoodController::class, 'showFood']);
 Route::get('/health', [HealthController::class, 'showHealth']);
@@ -52,3 +52,5 @@ Route::get('/input-diet', [InputHealthController::class, 'showInputHealthDiet'])
 Route::post('/input-diet', [InputHealthController::class, 'showInputHealthDiet'])->name('input-diet');
 
 Route::post('/health', [InputHealthController::class, 'store'])->name('health.store');
+
+Route::get('/get-recommendation', [FoodController::class, 'getRecommendation'])->name("get-recommendation");
