@@ -20,7 +20,7 @@ Route::get('/', [LandingPageController::class, 'showLandingPage']);
 Route::get('/FoodRec', [healthWiseController::class, 'tampil'])->name('healthWise.tampil');
 
 
-Route::get('/chat', [ChatController::class, 'showChat']);
+Route::get('/chat', [ChatController::class, 'showChat'])->name('chat');
 Route::get('/Exercise', [ExerciseController::class, 'showExercise']);
 
 Route::get('/food', [FoodController::class, 'showFood']);

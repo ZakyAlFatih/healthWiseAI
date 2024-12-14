@@ -53,11 +53,13 @@
                     </div>
                 </a>
 
+                <a href="/chat">
+                    <div class="card group grayscale" id="chatbot" onclick="showPopup()">
+                        <img class="h-36 w-36 object-contain" src="images/ChatBot.png" alt="Chatbot">
+                        <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Chatbot</p>
+                    </div>
+                </a>
 
-                <div class="card group grayscale" id="chatbot" onclick="showPopup()">
-                    <img class="h-36 w-36 object-contain" src="images/ChatBot.png" alt="Chatbot">
-                    <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Chatbot</p>
-                </div>
 
                 <div class="card group grayscale" id="health-report" onclick="showPopup()">
                     <img class="h-36 w-36 object-contain" src="images/HealthReport.png" alt="Health Report">
