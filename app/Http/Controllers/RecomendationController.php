@@ -38,6 +38,12 @@ class RecomendationController extends Controller
         //dd($siswa);
         return view('HealthRecomendation');
     }
+    function showRecPage()
+    {
+
+        //dd($siswa);
+        return view('recomendation-page');
+    }
 
 
     public function getRecommendation()

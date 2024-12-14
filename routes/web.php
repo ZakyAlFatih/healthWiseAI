@@ -66,3 +66,5 @@ Route::get('/health-page', [RecomendationController::class, 'showHealth'])->name
 
 
 Route::get('/health-rec', [RecomendationController::class, 'showHealthRec'])->name('health-rec');
+
+Route::get('/rec-page', [RecomendationController::class, 'showRecPage'])->name('rec-page');
