@@ -9,14 +9,36 @@ use App\Models\RiwayatKesehatan;
 use App\Models\Rekomendasi;
 use Illuminate\Http\Request;
 
-class FoodController extends Controller
+class RecomendationController extends Controller
 {
     function showFood()
     {
 
         //dd($siswa);
-        return view('Food');
+        $recommendations = $this->getRecommendation();
+        $foodrecom = $recommendations['foodrecom']; // Ambil hanya 'foodrecom'
+        return view('FoodRecomendation', ['foodrecom' => $foodrecom]);
     }
+    function showHealth()
+    {
+
+        //dd($siswa);
+        return view('Health');
+    }
+    function showExer()
+    {
+        $recommendations = $this->getRecommendation();
+        $exerrecom = $recommendations['exerrecom']; // Ambil hanya 'foodrecom'
+        return view('ExerciseRecomendation', ['exerrecom' => $exerrecom]);
+    }
+
+    function showHealthRec()
+    {
+
+        //dd($siswa);
+        return view('HealthRecomendation');
+    }
+
 
     public function getRecommendation()
     {
@@ -94,6 +116,6 @@ class FoodController extends Controller
             ->first(); // Ambil data pertama (terbaru)
 
         // Return the response to the view with the recommendation
-        return view('recommendation', ['foodrecom' => $rekomendasi->foodrecom, 'exerrecom' => $rekomendasi->exerrecom]);
+        return ['foodrecom' => $rekomendasi->foodrecom, 'exerrecom' => $rekomendasi->exerrecom];
     }
 }

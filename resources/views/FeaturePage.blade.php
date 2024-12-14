@@ -46,7 +46,7 @@
                     <p class="text-xl font-bold text-primaryColor mt-4 group-hover:text-purple-800 whitespace-nowrap">
                         Health Data Input</p>
                 </a>
-                <a href="/get-recommendation">
+                <a href="/health-page">
                     <div class="card group grayscale" id="recommendations" onclick="showPopup()">
                         <img class="h-36 w-36 object-contain" src="images/Recomendation.png" alt="Recommendations">
                         <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Recommendations</p>

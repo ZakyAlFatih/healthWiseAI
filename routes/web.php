@@ -11,6 +11,7 @@ use App\Http\Controllers\HealthReportLPController;
 use App\Http\Controllers\InputHealthController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RecomendationController;
 use App\Http\Controllers\RegisterController;
 
 
@@ -53,4 +54,15 @@ Route::post('/input-diet', [InputHealthController::class, 'showInputHealthDiet']
 
 Route::post('/health', [InputHealthController::class, 'store'])->name('health.store');
 
-Route::get('/get-recommendation', [FoodController::class, 'getRecommendation'])->name("get-recommendation");
+
+//Testing Food Recomendation and Exer
+Route::get('/food-rec', [RecomendationController::class, 'showFood'])->name("food-rec");
+
+//
+Route::get('/exer-rec', [RecomendationController::class, 'showExer'])->name("exer-rec");
+
+
+Route::get('/health-page', [RecomendationController::class, 'showHealth'])->name('health-page');
+
+
+Route::get('/health-rec', [RecomendationController::class, 'showHealthRec'])->name('health-rec');

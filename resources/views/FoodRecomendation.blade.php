@@ -39,12 +39,13 @@
 
         <div class="bg-cardBg p-6 rounded-card shadow-active">
             <h2 class="text-2xl font-semibold text-primaryColor mb-4">Food Recommendation:</h2>
-            <p class="text-lg text-gray-700">{{$foodrecom }}</p>
+            <p class="text-lg text-gray-700">{{ $foodrecom }}</p>
         </div>
 
         <div class="text-center mt-8">
             <a href="/input-personal">
-                <button class="bg-primaryColor text-white px-6 py-3 rounded-lg hover:bg-purple-800 transition">Input Health Data For Next Day</button>
+                <button class="bg-primaryColor text-white px-6 py-3 rounded-lg hover:bg-purple-800 transition">Input
+                    Health Data For Next Day</button>
             </a>
         </div>
     </div>
