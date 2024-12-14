@@ -13,7 +13,6 @@
     <div class="container">
         <h1>Recommendations</h1>
 
-        <!-- Display Food Recommendation -->
         <div class="food-recommendation">
             <h2>Food Recommendation:</h2>
             <p>{{ $foodrecom }}</p>
