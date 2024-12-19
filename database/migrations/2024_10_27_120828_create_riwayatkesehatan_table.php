@@ -20,7 +20,7 @@ class CreateRiwayatkesehatanTable extends Migration
             $table->integer('step_count')->nullable(); // menggantikan jumlah langkah
             $table->integer('sleep_duration')->nullable(); // menggantikan durasi tidur
             $table->text('physical_activity')->nullable(); // menggantikan rincian aktivitas fisik
-            $table->decimal('calories_burned', 5, 2)->nullable(); // menggantikan kalori yang terbakar
+            $table->decimal('calories_burned', 6, 2)->nullable(); // menggantikan kalori yang terbakar
             $table->integer('sedentary_time')->nullable(); // menggantikan waktu duduk
             $table->integer('water_intake')->nullable(); // menggantikan asupan air
             $table->text('meal_log')->nullable(); // menggantikan catatan makan

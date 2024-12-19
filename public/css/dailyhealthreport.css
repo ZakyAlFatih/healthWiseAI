@@ -1,0 +1,74 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: #ffffff;
+    min-height: 120vh;
+}
+
+.logo {
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #5d5a88;
+    line-height: 18px;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 50px;
+}
+
+.desc {
+    color: #9795b5;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.health-card {
+    background-color: #5d5a88;
+    color: white;
+    height: 590px;
+    width: 594px;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+}
+
+.goal-icon {
+    padding-top: 120px;
+}
+
+.goal-percentage {
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.metric-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    height: 284px;
+    width: 284px;
+    text-align: left;
+    align-content: center;
+}
+
+.metric-title {
+    color: #5d5a88;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.metric-value {
+    font-size: 44px;
+    color: #5d5a88;
+    font-weight: bold;
+}
+
+.metric-unit {
+    font-size: 44px;
+    color: #bcbacd;
+    font-weight: bold;
+}

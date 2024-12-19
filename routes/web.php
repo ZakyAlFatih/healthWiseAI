@@ -68,3 +68,8 @@ Route::get('/health-page', [RecomendationController::class, 'showHealth'])->name
 Route::get('/health-rec', [RecomendationController::class, 'showHealthRec'])->name('health-rec');
 
 Route::get('/rec-page', [RecomendationController::class, 'showRecPage'])->name('rec-page');
+
+Route::get('/dailyreport', [HealthReportLPController::class, 'showDaily']);
+Route::get('/monthlyreport', [HealthReportLPController::class, 'showMonthly']);
+Route::get('/report', [HealthReportLPController::class, 'showReport']);
+

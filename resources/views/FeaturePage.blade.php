@@ -60,11 +60,12 @@
                     </div>
                 </a>
 
-
-                <div class="card group grayscale" id="health-report" onclick="showPopup()">
-                    <img class="h-36 w-36 object-contain" src="images/HealthReport.png" alt="Health Report">
-                    <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Health Report</p>
-                </div>
+                <a href="/report">
+                    <div class="card group grayscale" id="health-report" onclick="showPopup()">
+                        <img class="h-36 w-36 object-contain" src="images/HealthReport.png" alt="Health Report">
+                        <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Health Report</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
