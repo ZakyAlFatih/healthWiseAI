@@ -30,7 +30,7 @@
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md">
         <div class="flex items-center px-8 py-4">
-            <img src="./image/HealthWise.png" alt="HealthWise Logo" class="h-10">
+            <img src="images/HealthWise.png" alt="HealthWise Logo" class="h-10">
             <p class="text-lg font-bold text-primaryColor ml-4">HealthWiseAI</p>
         </div>
     </nav>
