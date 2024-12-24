@@ -127,9 +127,9 @@
 
         <!-- Tabs -->
         <div class="tab-links d-flex justify-content-center mb-4">
-            <a href="#" class="active">Health</a>
-            <a href="food.html">Food</a>
-            <a href="exercise.html">Exercise</a>
+            <a href="/health-rec" class="active">Health</a>
+            <a href="/food-rec">Food</a>
+            <a href="/exer-rec">Exercise</a>
         </div>
 
         <!-- Card -->
@@ -143,10 +143,13 @@
                     <p class="mb-4">
                         Expert guidance to help you achieve your <br>
                         optimal health.</p>
-                    <button class="btn btn-learn-more">
-                        Learn More
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
+                    <a href="/health-rec">
+                        <button class="btn btn-learn-more">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </a>
+
                 </div>
             </div>
         </div>

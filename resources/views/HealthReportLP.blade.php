@@ -38,11 +38,15 @@
             <p class="text-4xl mb-4 font-bold">Health Report</p>
             <p class="text-m font-normal w-96">Access daily and monthly health reports to keep your well-being on track.
             </p>
-            <button
-                class="bg-primaryColor mt-10 hover:bg-purple-700 text-white font-bold py-4 px-14 rounded-full text-sm mr-4">View
-                Daily Report</button>
-            <button class=" mt-10 text-primaryColor border font-normal py-4 px-14 rounded-full text-sm">View Monthly
-                Report</button>
+            <a href="/dailyreport">
+                <button
+                    class="bg-primaryColor mt-10 hover:bg-purple-700 text-white font-bold py-4 px-14 rounded-full text-sm mr-4">View
+                    Daily Report</button>
+            </a>
+            <a href="/monthlyreport">
+                <button class=" mt-10 text-primaryColor border font-normal py-4 px-14 rounded-full text-sm">View Monthly
+                    Report</button>
+            </a>
         </div>
     </div>
     </div>

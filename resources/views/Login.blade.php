@@ -4,183 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthWiseAI</title>
+    <title>HealthWiseAI - Login</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #fff;
-            font-family: 'rotunda', sans-serif;
-        }
-
-        /* Header section */
-        .logo {
-            font-weight: bolder;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            color: #5D5A88;
-            line-height: 18px;
-        }
-
-        .logo img {
-            height: 70px;
-            margin-right: 10px;
-            margin-left: 50px;
-        }
-
-        .btn-login {
-            padding: 12px 24px;
-            border: #D4D2E3 solid 1px;
-            border-radius: 30px;
-            color: #5D5A88;
-        }
-
-        .btn-login:hover {
-            background-color: #E7E6F2;
-            color: #5D5A88;
-        }
-
-        .btn-custom {
-            background-color: #5D5A88;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 30px;
-            margin-right: 50px;
-        }
-
-        .btn-custom:hover {
-            background-color: #9795B5;
-        }
-
-        /* Main layout styling */
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            min-height: calc(100vh - 100px);
-            padding: 0 50px;
-        }
-
-        /* Image and welcome section */
-        .image-wrapper {
-            position: relative;
-            max-width: 527px;
-            margin-left: -110px;
-            flex-shrink: 0;
-        }
-
-        .doctor-image {
-            width: 100%;
-            height: auto;
-        }
-
-        .welcome-section {
-            position: absolute;
-            top: 85px;
-            left: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            max-width: 500px;
-            z-index: 2;
-            white-space: nowrap;
-        }
-
-        .welcome-text {
-            font-size: 56px;
-            font-weight: bold;
-            line-height: 66px;
-            color: #5D5A88;
-            margin-bottom: 10px;
-        }
-
-        .welcome-desc {
-            font-size: 18px;
-            color: #9795B5;
-        }
-
-        /* Form container */
-        .form-container {
-            background-color: #F2F1FA;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
-            height: 500px;
-            margin-left: 0;
-            margin-right: auto;
-            margin-left: 350px;
-        }
-
-        .form-label {
-            font-size: 18px;
-            font-weight: bold;
-            color: #5D5A88;
-            margin-top: 20px;
-        }
-
-        .form-control {
-            border-radius: 50px;
-            height: 56px;
-            padding-left: 20px;
-            margin-top: 5px;
-        }
-
-        .form-control::placeholder {
-            color: #ADABC3;
-        }
-
-        /* Button wrapper to center button */
-        .btn-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        /* Button styling */
-        .btn-primary {
-            background-color: #5D5A88;
-            border: none;
-            border-radius: 50px;
-            height: 70px;
-            color: #fff;
-            font-weight: bold;
-            font-size: 16px;
-            width: 235px;
-            margin-top: 32px;
-        }
-
-        .btn-primary:hover {
-            background-color: #9795B5;
-        }
-
-        p.mt-3.text-center small {
-            color: #ADABC3;
-        }
-
-        .link-muted {
-            color: #ADABC3;
-            text-decoration: none;
-        }
-
-        .link-muted:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
+    @if (session('success'))
+        <div id="success-alert" class="bg-green-500 text-white p-4 rounded-lg mb-4 fixed top-0 left-0 right-0">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div id="error-alert" class="bg-red-500 text-white p-4 rounded-lg mb-4 fixed top-0 left-0 right-0">
+            {{ session('error') }}
+        </div>
+    @endif
+
     <header class="d-flex justify-content-between align-items-center p-4">
         <div class="logo">
             <img src="images/Healthwise_logo.png" alt="Logo">
             HealthWiseAI
         </div>
         <div>
-            <a href="login.html" class="btn btn me-2 btn-login">Login</a>
-            <a href="#" class="btn btn-custom text-white">Get Started</a>
+            <a href="{{ route('login') }}" class="btn btn me-2 btn-login">Login</a>
+            <a href="{{ route('register') }}" class="btn btn-custom text-white">Get Started</a>
         </div>
     </header>
 
@@ -199,14 +50,17 @@
 
         <!-- Login Form Section -->
         <div class="form-container">
-            <form>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                    <input type="email" name="email" class="form-control" id="email"
+                        placeholder="Enter your email address" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    <input type="password" name="password" class="form-control" id="password"
+                        placeholder="Enter your password" required>
                 </div>
 
                 <!-- Centering button wrapper -->
@@ -215,14 +69,13 @@
                 </div>
 
                 <p class="mt-3 text-center">
-                    <small>Don't have an account? <a href="#" class="link-muted">Sign up here</a></small>
+                    <small>Don't have an account? <a href="{{ route('register') }}" class="link-muted">Sign up
+                            here</a></small>
+
                 </p>
             </form>
         </div>
-
-
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
 </body>
 
 </html>

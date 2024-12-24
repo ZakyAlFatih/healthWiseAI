@@ -7,126 +7,7 @@
     <title>HealthWiseAI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #9795B5;
-            color: #fff;
-            font-family: 'rotunda', sans-serif;
-            background-image: url("images/Landing_BG.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            height: 14vh;
-        }
-
-        .logo {
-            font-weight: bolder;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            color: #5D5A88;
-            line-height: 18px;
-        }
-
-        .logo img {
-            height: 70px;
-            margin-right: 10px;
-            margin-left: 50px;
-        }
-
-        .hero-section {
-            height: 90vh;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 90px;
-        }
-
-        .hero-text {
-            max-width: 50%;
-        }
-
-        .hero-text h1 {
-            font-size: 56px;
-            font-weight: bold;
-            line-height: 66px;
-        }
-
-        .hero-text h1 span {
-            display: block;
-            text-align: left;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-
-        .hero-image {
-            max-width: 55%;
-        }
-
-        .hero-image img {
-            width: 100%;
-        }
-
-        .btn-login {
-            padding: 12px 24px;
-            border: #D4D2E3 solid 1px;
-            border-radius: 30px;
-            color: #5D5A88;
-        }
-
-        .btn-login:hover {
-            background-color: #E7E6F2;
-            color: #5D5A88;
-        }
-
-        .btn-custom {
-            background-color: #5D5A88;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 30px;
-            margin-right: 100px;
-        }
-
-        .btn-custom:hover {
-            background-color: #9795B5;
-        }
-
-        .btn-custom1 {
-            background-color: #fff;
-            border: none;
-            padding: 18px 30px;
-            border-radius: 30px;
-            margin-right: 100px;
-            color: #5D5A88;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .btn-custom1:hover {
-            background-color: #5D5A88;
-            color: #fff;
-        }
-
-        .btn-custom1 .fa-arrow-right {
-            font-size: 18px;
-            margin-left: 10px;
-            color: #5D5A88;
-        }
-
-        .btn-custom1:hover .fa-arrow-right {
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="css/landingpage.css">
 </head>
 
 <body>
@@ -136,8 +17,8 @@
             HealthWiseAI
         </div>
         <div>
-            <a href="login.html" class="btn btn me-2 btn-login">Login</a>
-            <a href="#" class="btn btn-custom text-white">Get Started</a>
+            <a href="/login" class="btn btn me-2 btn-login">Login</a>
+            <a href="/register" class="btn btn-custom text-white">Get Started</a>
         </div>
     </header>
 
@@ -149,7 +30,7 @@
                 <span>Health Decisions</span>
             </h1>
             <p>Personalized AI-driven health insights at your fingertips.</p>
-            <a href="#" class="btn btn-custom1 mt-4">
+            <a href="/register" class="btn btn-custom1 mt-4">
                 Get Started
                 <i class="fas fa-arrow-right"></i>
             </a>

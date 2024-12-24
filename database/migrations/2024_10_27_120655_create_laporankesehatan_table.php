@@ -13,6 +13,8 @@ class CreateLaporankesehatanTable extends Migration
             $table->string('userID', 50);
             $table->mediumInteger('jumlahLangkah')->unsigned()->nullable();
             $table->mediumInteger('jumlahAirMinum')->unsigned()->nullable();
+            $table->mediumInteger('jumlahKalori')->unsigned()->nullable();
+            $table->mediumInteger('durasiTidur')->unsigned()->nullable();
             $table->date('tanggal');
             $table->timestamps();
 

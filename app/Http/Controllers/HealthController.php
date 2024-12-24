@@ -10,6 +10,6 @@ class HealthController extends Controller
     {
 
         //dd($siswa);
-        return view('Health');
+        return view('HealthRecomendation');
     }
 }
