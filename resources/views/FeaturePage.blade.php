@@ -47,21 +47,21 @@
                         Health Data Input</p>
                 </a>
                 <a href="/rec-page">
-                    <div class="card group grayscale" id="recommendations" onclick="showPopup()">
+                    <div class="card group {{ $isHealthData ? '' : 'grayscale' }}" id="recommendations" onclick="showPopup()">
                         <img class="h-36 w-36 object-contain" src="images/Recomendation.png" alt="Recommendations">
                         <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Recommendations</p>
                     </div>
                 </a>
 
                 <a href="/chat">
-                    <div class="card group grayscale" id="chatbot" onclick="showPopup()">
+                    <div class="card group {{ $isHealthData ? '' : 'grayscale' }}" id="chatbot" onclick="showPopup()">
                         <img class="h-36 w-36 object-contain" src="images/ChatBot.png" alt="Chatbot">
                         <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Chatbot</p>
                     </div>
                 </a>
 
                 <a href="/report">
-                    <div class="card group grayscale" id="health-report" onclick="showPopup()">
+                    <div class="card group {{ $isHealthData ? '' : 'grayscale' }}" id="health-report" onclick="showPopup()">
                         <img class="h-36 w-36 object-contain" src="images/HealthReport.png" alt="Health Report">
                         <p class="text-xl font-bold text-primaryColor mt-4 whitespace-nowrap">Health Report</p>
                     </div>
@@ -80,7 +80,7 @@
     </div>
 
     <script>
-        let isHealthDataComplete = false;
+        let isHealthDataComplete = {{ $isHealthData ? 'true' : 'false' }};
 
         function completeHealthData() {
             isHealthDataComplete = true;

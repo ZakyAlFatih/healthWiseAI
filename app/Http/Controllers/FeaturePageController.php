@@ -3,13 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\RiwayatKesehatan;
 
 class FeaturePageController extends Controller
 {
-    function showFeaturePage()
+    public function showFeaturePage(Request $request)
     {
+        $userID = auth()->id();
+        
+        $laporanHarian = RiwayatKesehatan::where('userID', $userID)
+            ->whereDate('created_at', now()->toDateString())
+            ->get();
 
-        //dd($siswa);
-        return view('FeaturePage');
+        $isHealthData = $laporanHarian->isNotEmpty();
+
+        return view('FeaturePage', compact('isHealthData'));
     }
 }
