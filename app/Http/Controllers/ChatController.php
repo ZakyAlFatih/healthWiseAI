@@ -15,30 +15,23 @@ class ChatController extends Controller
     public function getChatResponse(Request $request)
     {
         try {
-            $healthCheckResponse = Groq::chat()->completions()->create([
+            $response = Groq::chat()->completions()->create([
                 'model' => 'llama-3.1-70b-versatile',  
                 'messages' => [
-                    ['role' => 'user', 'content' => 'Hanya menjawab True or False tanpa penjelasan, apakah ini termasuk pertanyaan/pernyataan terkait Kesehatan: ' . $request->input('message')]
+                    [
+                        'role' => 'user',
+                        'content' => 'Hanya menjawab True or False tanpa penjelasan, apakah ini termasuk pertanyaan/pernyataan terkait Kesehatan: ' . $request->input('message') . '. Jika ini adalah pertanyaan terkait kesehatan, jawab pertanyaan ini: ' . $request->input('message')
+                    ]
                 ],
             ]);
 
-            $healthCheckResult = $healthCheckResponse['choices'][0]['message']['content'];
-
-            if (strtolower($healthCheckResult) === 'true') {
-                $response = Groq::chat()->completions()->create([
-                    'model' => 'llama-3.1-70b-versatile',  
-                    'messages' => [
-                        ['role' => 'user', 'content' => $request->input('message')]
-                    ],
-                ]);
-                $chatResponse = $response['choices'][0]['message']['content'];
-
+            $chatResponse = $response['choices'][0]['message']['content'];
+            if (stripos($chatResponse, 'true') !== false) {
+                $chatResponse = str_ireplace('true', '', $chatResponse);
                 return response()->json(['response' => $chatResponse]);
-            } 
-            else {
+            } else {
                 return response()->json(['response' => 'Tolong tanya saya terkait pertanyaan Kesehatan.']);
             }
-
         } catch (\Exception $e) {
             return response()->json(['error' => 'Failed to get response from Groq API: ' . $e->getMessage()], 500);
         }
